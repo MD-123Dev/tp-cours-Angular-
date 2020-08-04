@@ -1,0 +1,33 @@
+<div>
+  
+  <button type="button" class="btn btn-primary" (click)="save()">Add</button>
+</div>
+
+
+<div *ngFor="let produit of produits">
+  <ul>
+    <li>
+      {{ produit.id }} {{ produit.NomProd }}
+    </li>
+  <button type="button" class="btn btn-primary" (click)="Remove(produit)">Delect</button>
+  <button type="button" class="btn btn-primary" (click)="Remove(produit)">Edit</button>
+  </ul>
+
+ 
+  
+</div>
+
+
+<span
+  class= "glyphicon"
+  [ngClass]="{ 'glyphicon-star': isSelected,'glyphicon-star-empty': !isSelected}"
+
+[ngClass]="{
+'color': isSelected ?'red' : 'blue',
+'font-size': isSelected ? '40px' : '20px'
+}"
+
+  (click)="favorite()"
+ >
+</span> 
+

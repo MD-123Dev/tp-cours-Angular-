@@ -1,0 +1,28 @@
+
+
+<div class="container">
+  <div class="row">
+    <h1>{{ Title }}</h1>
+      <div class="col-6">
+          <input  name="txtRemplir" #ctrl type="text" name="txtRemplir" id="txtRemplir">
+      </div>
+     
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <input  type="text" name="txtDispaly" id="txtDisplay" [value]="dipslay"
+          [style.borderColor]="isActiveColor ? 'black' : 'red' ">
+      </div>
+    </div>
+
+     
+     <ul>
+       <li [class.active]="isActive">link</li>
+     </ul>
+     <button type="button" (click)="onclick(ctrl)" class="btn btn-primary"
+       [class.active]="isActive">applicted</button>
+
+    
+
+</div>

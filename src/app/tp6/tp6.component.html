@@ -1,0 +1,76 @@
+
+ <form #form="ngForm" (ngSubmit)="submit(form)">
+   <div class="form-group">
+     <label for="nom">Nom : </label>
+     <input required minlength=7 pattern="[A-Z][a-z]+" type="text" name="nom" ngModel="nom" #nom="ngModel" id="nom" class="form-control" placeholder="">
+     <div class="alert alert-danger" *ngIf="nom.touched && !nom.valid" role="alert">
+       <div *ngIf="nom.errors.required"> Ce chanps oblegatoire</div>
+       <div *ngIf="nom.errors.minlength"> doint au moins 7 carceter </div>
+        <div *ngIf="nom.errors.pattern"> LE FORMAT Non corected i faut debut par AZ </div>
+     </div>
+     
+   </div>
+   <div class="form-group">
+     <label for="Prenom">Prenom : </label>
+     <input type="text" required minlength=7 pattern="[A-Z][a-z]+" name="Prenom" id="Prenom" ngModel="Prenom"
+       #Prenom="ngModel" class="form-control" placeholder="">
+     <div class="alert alert-danger" *ngIf="Prenom.touched && !Prenom.valid" role="alert">
+       <div *ngIf="Prenom.errors.required"> Ce chanps oblegatoire</div>
+       <div *ngIf="Prenom.errors.minlength"> doint au moins 7 carceter </div>
+       <div *ngIf="Prenom.errors.pattern"> LE FORMAT Non corected i faut debut par AZ </div>
+     </div>
+   </div>
+   
+   <div class="form-group">
+     <label for="Gmail" >Gmail : </label>
+     <input required pattern="(\W|^)[\w.+\-]*@gmail\.com(\W|$)" type="email" ngModel="Gmail" #Gmail="ngModel"
+       name="Gmail" id="Gmail"
+       class="form-control"
+       placeholder="">
+   <div class="alert alert-danger" *ngIf="Gmail.touched && !Gmail.valid" role="alert">
+     <div *ngIf="Gmail.errors.required"> Ce chanps oblegatoire</div>
+     <div *ngIf="Gmail.errors.pattern"> LE FORMAT Non corected </div>
+   </div>
+   </div>
+
+   <div class="form-group">
+     <label for="nom">Tel : : </label>
+     <input type="text" required pattern="[+](212)[1-9]{9}" name="Tel" id="Tel" ngModel="Tel" #Tel="ngModel"
+       class="form-control"
+       placeholder="">
+   <div class="alert alert-danger" *ngIf="Tel.touched && Tel.valid" role="alert">
+     <div *ngIf="Tel.errors?.required"> Ce chanps oblegatoire</div>
+     <div *ngIf="Tel.errors?.pattern"> LE FORMAT Non corected "+212...."</div>
+   </div>
+   </div>
+
+    <div class="form-group">
+      <label for="nom">Paye </label>
+        <select name="paye" id="" ngModel>
+          <option value=""></option>
+          <option *ngFor="let paye of payes" (value)="paye">{{paye}}</option>
+        </select>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optradio" value=1 ngModel >Homme
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optradio" value=2 ngModel>Femme
+      </label>
+    </div>
+
+   <div class="checkbox" >
+     <label for="">
+       <input type="checkbox" ngModel name="checkb">Acceptez-vous que vos donnees utiliser
+     </label>
+   </div>
+    <div class="form-group">
+         <button type="submit" class="btn btn-primary" [disabled]="!form.valid">save</button>
+    </div>
+    
+ </form>
+
+ {{form.value | json}}

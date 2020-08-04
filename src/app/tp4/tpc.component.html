@@ -1,0 +1,16 @@
+
+<div *ngIf="produits.length > 0; else noproduits">
+  <div *ngFor="let prod of produits">
+    {{prod}}
+  </div>
+</div>
+<ng-template #noproduits>
+  <h3>no produits </h3>
+</ng-template>
+
+<button (click)="onclick()">Affichier</button>
+<div [hidden]="!isActive">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum labore perspiciatis accusantium ab. Unde ad esse odit beatae. Voluptate quidem alias obcaecati modi voluptatum! Ut enim nobis voluptatem inventore ipsa quis porro. Tempora ad corporis nisi laborum unde placeat exercitationem! Doloribus, dolore, iure ipsa qui quibusdam quis laudantium aliquam velit repellendus neque assumenda corporis molestiae similique repellat? Eveniet, eos blanditiis sequi illum non minus eligendi at sit pariatur numquam provident, a deleniti, quo beatae quas voluptate! Nihil, ab nostrum! Commodi voluptates, explicabo eveniet tempore enim repudiandae. Ea amet, molestiae fugiat consequuntur iste necessitatibus ratione esse tenetur tempora natus assumenda vero.
+</div>
+
+

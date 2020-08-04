@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="Nom"></label>
+      <input type="text" class="form-control" name="Nom" id="" aria-describedby="helpId" placeholder="" value="{{ nompersone | uppercase }}">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <label for="Tel">Tel : </label>
+      <input type="text" class="form-control" name="Tel" id="Tel" aria-describedby="helpId" placeholder=""
+        value="{{ Tel | phone }}">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="Date">Date : </label>
+      <input type="text" class="form-control" name="Date" id="Date" aria-describedby="helpId" placeholder="" value="{{ Datepersone | date :'yyyy/mm/dd'}}">
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="prix">prix : </label>
+      <input type="text" class="form-control" name="prix" id="prix" aria-describedby="helpId" placeholder=""
+        value="{{ prix | currency:'USD':'symbol':'3.1-1' }}">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label for="pipepersonaliser">Description</label>
+      <p id="pipepersonaliser">{{textexp | decrease:40 }}</p>
+    </div>
+  </div>
+</div>
