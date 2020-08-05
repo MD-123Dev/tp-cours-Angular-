@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
+# Description ( chaque tp et les technique utliser ) 
+
+ - Tp : Style binding - class binding - laison de proprieter - event Binding .
+ - Tp 2 : two way data binding - ngModel - ngFor .
+ - Tp 3 : Pipe - PERSONNALISER UN PIPE . 
+ - Tp 4 : ngIf - Hidden 
+ - Tp 5 : Array et CRUD - ngFor -ngStyle - ngClass .
+ - Tp 6 : gestion de formulaire et les error avec angular .
+ 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
