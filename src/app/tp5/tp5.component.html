@@ -22,7 +22,7 @@
   class= "glyphicon"
   [ngClass]="{ 'glyphicon-star': isSelected,'glyphicon-star-empty': !isSelected}"
 
-[ngClass]="{
+[ngStyle]="{
 'color': isSelected ?'red' : 'blue',
 'font-size': isSelected ? '40px' : '20px'
 }"
